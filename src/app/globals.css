@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@config "../../tailwind.config.ts";
+
+:root {
+    --background: #020617;
+    --foreground: #f8fafc;
+    --primary: #f97316;
+    --primary-hover: #fb923c;
+    --primary-muted: rgba(249, 115, 22, 0.1);
+    --accent: #f59e0b;
+    --accent-hover: #fbbf24;
+    --surface: #0f172a;
+    --surface-hover: #1e293b;
+    --border: #1e293b;
+    --border-hover: #334155;
+    --muted: #94a3b8;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Selection styling */
+::selection {
+    background-color: rgba(249, 115, 22, 0.3);
+    color: #f8fafc;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styling */
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Body */
+body {
+    background: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(249, 115, 22, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Gradient text */
+.gradient-text {
+    background: linear-gradient(135deg, #f97316, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Glass card */
+.glass-card {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+/* Sidebar active state */
+.sidebar-active {
+    background: rgba(249, 115, 22, 0.15);
+    border-left: 3px solid #f97316;
+}
