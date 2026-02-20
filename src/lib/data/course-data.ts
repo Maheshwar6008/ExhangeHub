@@ -61,7 +61,7 @@ export const courseData: CourseData = {
     trainer: {
         name: "Maheshwar",
         title: "Infrastructure & Cloud Administrator (HCLTech)",
-        linkedin: "https://linkedin.com/in/yourprofile",
+        linkedin: "https://www.linkedin.com/in/maheshwar-kumar-0092832b7/",
     },
     whatYouWillLearn: [
         "Configure and manage Exchange Online organization settings",
